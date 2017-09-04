@@ -98,6 +98,7 @@ public class DefaultBitbucketCloudClient implements GitClient {
 			apiUrl = protocol + "://" + hostName + settings.getApi() + repoName;
 			LOG.debug("API URL IS:"+apiUrl);
 		}
+LOG.debug("API URL IS:"+apiUrl);
 		Date dt;
 		if (firstRun) {
 			int firstRunDaysHistory = settings.getFirstRunHistoryDays();
