@@ -93,12 +93,12 @@ public class DefaultBitbucketCloudClient implements GitClient {
 		String repoName = repoUrl.substring(hostUrl.length(), repoUrl.length());
 		String apiUrl = "";
 		if (hostName.startsWith(settings.getHost())) {
-			apiUrl = protocol + "://" + settings.getHost() + repoName;
+			apiUrl = protocol + "://api." + settings.getHost() + repoName;
 		} else {
-			apiUrl = protocol + "://" + hostName + settings.getApi() + repoName;
+			apiUrl = protocol + "://api." + hostName + settings.getApi() + repoName;
 			LOG.debug("API URL IS:"+apiUrl);
 		}
-LOG.debug("API URL IS:"+apiUrl);
+LOG.debug("API URL IS.:"+apiUrl);
 		Date dt;
 		if (firstRun) {
 			int firstRunDaysHistory = settings.getFirstRunHistoryDays();
@@ -114,10 +114,8 @@ LOG.debug("API URL IS:"+apiUrl);
 		TimeZone timeZone = calendar.getTimeZone();
 		Calendar cal = Calendar.getInstance(timeZone);
 		cal.setTime(dt);
-		String thisMoment = String.format("%tFT%<tRZ", cal);
 
-		String queryUrl = apiUrl.concat("/commits?sha=" + repo.getBranch()
-				+ "&since=" + thisMoment);
+		String queryUrl = apiUrl.concat("/commits/" + repo.getBranch());
 		/*
 		 * Calendar cal = Calendar.getInstance(); cal.setTime(dateInstance);
 		 * cal.add(Calendar.DATE, -30); Date dateBefore30Days = cal.getTime();
