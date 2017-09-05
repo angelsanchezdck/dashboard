@@ -29,7 +29,7 @@ Jenkins plugin allows Hygieia to create link between code commit, build, artifac
 ![Image](/media/images/team-pipeline-config.png)
 
 
-#### Hygieia 2.0, Screen Flows
+#### Hygieia 2.0, Screen Flows 
 
 ##### Select Dashboard:
 ![Image](/media/images/h2-select-dashboard.png)
