@@ -58,7 +58,7 @@ hygieia-jira-feature-collector:
         #64-bit encoded credentials with the pattern username:password
         #on a mac you con create them with : echo "username:password" | base64
         #reference:  https://www.base64decode.org/
-  - JIRA_CREDENTIALS=YW5nZWwuc2FuY2hlejptb3JjaXlhNDQangel=
+  - JIRA_CREDENTIALS=YW5nZWwuc2FuY2hlejptb3JjaXlhNDQ=
         #OPTIONAL - you may want ot tweek these
   - JIRA_CRON=0 0/5 * * * *
         #Start dates from which to begin collector data, if no other data is present - usually, a month back is appropriate (required)
