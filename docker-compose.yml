@@ -131,6 +131,7 @@ hygieia-sonar-codequality-collector:
   environment:
   - SONAR_CRON=0 0/5 * * * *
   - SONAR_URL=http://localhost:9000/sonar
+  - SONAR_VERSION=6
 
 hygieia-bitbucket-scm-collector:
   image: hygieia-bitbucket-scm-collector:latest
