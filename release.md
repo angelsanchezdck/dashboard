@@ -10,7 +10,7 @@ ossrhUsername=<whatever>
 ossrhPassword=<secret>
 ```
 
---------------------------------------
+---------------------------------------
 
 Release:
 
