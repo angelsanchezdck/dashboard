@@ -102,6 +102,15 @@ feature.masterStartDate=${JIRA_MASTER_START_DATE:-2008-01-01T00:00:00.000000}
 # In Jira, general IssueType IDs are associated to various "issue"
 # attributes. However, there is one attribute which this collector's
 # queries rely on that change between different instantiations of Jira.
+# Please provide a numerical ID reference to your instance's IssueType for
+# the lowest level of Issues (e.g., "user story") specific to your Jira
+# instance.  Note:  You can retrieve your instance's IssueType ID
+# listings via the following URI:  https://[your-jira-domain-name]/rest/api/2/issuetype/
+  feature.jiraIssueTypeID=${JIRA_ISSUE_TYPE_ID:-10100}
+
+# In Jira, general IssueType IDs are associated to various "issue"
+# attributes. However, there is one attribute which this collector's
+# queries rely on that change between different instantiations of Jira.
 # Please provide a String Name reference to your instance's IssueType for
 # the lowest level of Issues (e.g., "user story") specific to your Jira
 # instance.  Note:  You can retrieve your instance's IssueType Name
